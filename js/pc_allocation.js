@@ -38,6 +38,28 @@ $(document).ready(function() {
 		"sAjaxDataProp": "loginData"	
     } );
 } );*/
+$(document).ready(function() {
+    $('#report_table').dataTable( {
+        "bProcessing": true,
+        "sAjaxSource": 'http://localhost:8080/Batch_Management/report',
+		"sAjaxDataProp": "loginData"	
+    } );
+} );
+
+$(document).ready(function() {
+    var oTable = $('#allocation_table').dataTable( {
+        "bProcessing": true,
+        "sAjaxSource": "http://localhost:8080/Batch_Management/pcallocation",
+		"sAjaxDataProp": "allocationData",
+        "aoColumns": [
+            { "mDataProp": "machineNumber" },
+            { "mDataProp": "employeeNumber" },
+            { "mDataProp": "mailID" },
+            { "mDataProp": "hostName" },
+            { "mDataProp": "batchID" }
+        ]
+    } );
+} );
 
 function readCSV(file)
 {

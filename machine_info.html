@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8" />
-<title>Apple FP Batch Management</title>
+<title>Apple FP Batch Management - Machine Info</title>
 <meta name="description" content="Batch Management">
 <meta name="keywords" content="batch,management">
 <link rel="stylesheet" href="style.css" />
 <script src="js/jquery.js" language="javascript" type="text/javascript"></script>
 <script src="js/jquery.dataTables.min.js" language="javascript" type="text/javascript"></script>
-<script src="js/pc_allocation.js" language="javascript" type="text/javascript"></script>
+<script src="js/machine_info.js" language="javascript" type="text/javascript"></script>
 <script src="js/csvjson.min.js" language="javascript" type="text/javascript"></script>
 <style type="text/css" title="currentStyle">
 	@import "css/demo_page.css";
@@ -28,34 +28,27 @@
       <!-- menu start -->
       <ul id="nav">
         <li><a href="index.html">Home</a></li>  
-        <li><a href="machine_info.html">Machine Info</a></li>   
-        <li class="current"><a href="pc_allocation.html">PC Allocation</a></li>  
+        <li class="current"><a href="machine_info.html">Machine Info</a></li>   
+        <li><a href="pc_allocation.html">PC Allocation</a></li>  
         <li><a href="trainee_info.html">Trainee Info</a></li>
         <li><a href="batch_info.html">Batch Info</a></li>
         <li><a href="defaulter_info.html">Defaulters</a></li>  
-        <li><a href="#">Contact</a></li>
-</ul>
+        <li><a href="#">Contact</a></li></ul>
 <br>
 <br>
        <!-- menu end -->
 
   <div id="content">
-<h2>PC Allocation</h2>
+<h2>Machine Info</h2>
 <br />
-<div id="uploadForm">
-<form action="#" method="get" name="csv_upload" id="upload_form" onSubmit="return readCSV();">
-<input type="file" onChange="readCSV(this.files)"> Select csv file to Upload<br />
-</div>
 <br /><br />
-<div id="allocation">
-	<table cellpadding="0" cellspacing="0" border="0" class="display" id="allocation_table">
+<div id="machine_info">
+	<table cellpadding="0" cellspacing="0" border="0" class="display" id="machineInfo">
 	<thead>
 		<tr>
-			<th width="20%">Machine Number</th>
-			<th width="20%">Employee Number</th>
-			<th width="20%">Mail ID</th>
-			<th width="15%">Host Name</th>
-            <th width="15%">Batch ID</th>
+			<th width="10%">Machine Number</th>
+			<th width="20%">Host Name</th>
+			<th width="20%">Recent IP</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -63,11 +56,9 @@
 	</tbody>
 	<tfoot>
 		<tr>
-			<th width="20%">Machine Number</th>
-			<th width="20%">Employee Number</th>
-			<th width="20%">Mail ID</th>
-			<th width="15%">Host Name</th>
-            <th width="15%">Batch ID</th>
+			<th width="10%">Machine Number</th>
+			<th width="20%">Host Name</th>
+			<th width="20%">Recent IP</th>
 		</tr>
 	</tfoot>
 </table>		
