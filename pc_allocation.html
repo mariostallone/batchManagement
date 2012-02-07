@@ -27,9 +27,9 @@
   </div>
       <!-- menu start -->
       <ul id="nav">
-	<li class="current"><a href="#">Home</a></li>  
+	<li><a href="index.html">Home</a></li>  
 	<li><a href="page.html">Machine Info</a></li>   
-    <li><a href="pc_allocation.html">PC Allocation</a></li>
+    <li class="current"><a href="pc_allocation.html">PC Allocation</a></li>
     <li><a href="media.html">Media</a></li>
 	<li><a href="page.html">Drop Down</a>
     <ul>
@@ -68,7 +68,7 @@
 <br />
 <div id="uploadForm">
 <form action="#" method="get" name="csv_upload" id="upload_form" onSubmit="return readCSV();">
-<input type="file" onchange="readCSV(this.files)"> Select csv file to Upload<br />
+<input type="file" onChange="readCSV(this.files)"> Select csv file to Upload<br />
 </div>
 <br /><br />
 <div id="allocation">

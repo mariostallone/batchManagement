@@ -44,11 +44,12 @@ function readCSV(file)
 	console.log("File");
 	console.log(file);
 	var reader = new FileReader();
+	var output_json;
 	reader.onload = function(theFile) 
 	{
         console.log("Success");
 		console.log(theFile.target.result);
-		var output_json = csvjson.csv2json(theFile.target.result, {
+		output_json = csvjson.csv2json(theFile.target.result, {
     		delim: ",",
     		textdelim: "\""
     	});
@@ -78,8 +79,9 @@ function readCSV(file)
 	//reader.file = file;
 	reader.readAsText(file[0]);
 	//reader.readAsBinaryString(file);
-	/*$.post('ajax/test.html', 
-		   function(data) {
-							
-							});*/
+	$.post('http://localhost:8080/Batch_Management/pcallocation',output_json,
+		   function(data)
+		   {
+			   console.log(data);
+		   });
 }
